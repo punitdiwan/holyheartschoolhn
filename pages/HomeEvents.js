@@ -65,7 +65,7 @@ const HomeEvents = () => {
             <div className="mx-3">
                 <h1 className="py-2 text-center text-[white] "><b> News & Events</b></h1>
                 <div style={{ height: "305px", width: "100%" }} className="m-2 bg-[#d4d1d1]">
-                    <marquee behavior="scroll" direction="up" scrollamount="4" sty.envle={{ height: "305px", width: "100%" }}>
+                    <marquee behavior="scroll" direction="up" scrollamount="4" style={{ height: "305px", width: "100%" }}>
                         <div className="m-5 bg-[white]  ">
                             {
                                 data1?.data?.data.map((ei, i) =>
