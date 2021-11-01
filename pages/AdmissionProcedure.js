@@ -5,7 +5,7 @@ const AdmissionProcedure = ({ data_header }) => {
 
       return (
             <Layout header_data={data_header}>
-                  <div className="w-full h-full bg-no-repeat bg-cover bg-Admission container-fluid ">
+                  <div className="w-full h-full bg-no-repeat bg-cover bg-Admission container-fluid mt-10 ">
                         <img
                               src="https://rosemarydn.com/images/ad_upper.JPG"
                               className="w-full md:h-auto h-52"

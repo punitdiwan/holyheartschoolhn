@@ -1,17 +1,17 @@
-import React, {  useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
-const Header = ({header_data}) => { 
+const Header = ({ header_data }) => {
 
 
   const [abovetop, setabovetop] = useState("8rem")
 
 
   useEffect(() => {
-       document.addEventListener("scroll", () => { 
-const top = window.scrollY<1  ?(window.innerWidth<1024?("8rem"):("8rem")):("0px");
-        setabovetop(top);
-     });
+    document.addEventListener("scroll", () => {
+      const top = window.scrollY < 1 ? (window.innerWidth < 1024 ? ("8rem") : ("8rem")) : ("0px");
+      setabovetop(top);
+    });
 
   }, [])
   return (
@@ -23,21 +23,21 @@ const top = window.scrollY<1  ?(window.innerWidth<1024?("8rem"):("8rem")):("0px"
         >
           <img
             className="h-20 w-15 md:mr-3 "
-            src={header_data?.data? header_data?.data[0]?.logo?.data?.full_url : "https://rosemarydn.com/images/logo.png"}
-            //  src="https://rosemarydn.com/images/logo.png"
+            src={header_data?.data ? header_data?.data[0]?.logo?.data?.full_url : "/images/logo.png"}
+
           />
           <div className="mt-1 text-white item-center ">
             <span className="font-serif text-xl tracking-normal sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl" >
-            {header_data?.data? header_data?.data[0]?.title : "Maitretech Academy Public School"}
+              {header_data?.data ? header_data?.data[0]?.title : "Maitretech Academy Public School"}
               {/* Rose Mary Hr. Sec. School */}
             </span>
             <p className="mt-2 mr-2 sm:justify-items-center ">
-            {header_data?.data? header_data?.data[0]?.address : "  Dwarka Nagar Bhopal"}
+              {header_data?.data ? header_data?.data[0]?.address : "  Dwarka Nagar Bhopal"}
               {/* Dwarka Nagar Bhopal */}
             </p>
           </div>
-        </div> 
-        <nav className="shadow-sm z-50 stickyt flex flex-wrap items-center justify-center bg-white md:py-3  lg:py-3 "  style={{  top: `${abovetop}`}}>
+        </div>
+        <nav className="shadow-sm z-50 stickyt flex flex-wrap items-center justify-center bg-white md:py-3  lg:py-3 " style={{ top: `${abovetop}` }}>
           <label
             className="items-center block px-3 py-2 text-black border border-teal-400 rounded cursor-pointer lg:hidden hover:border-white"
             htmlFor="menu-toggle"
@@ -76,7 +76,7 @@ const top = window.scrollY<1  ?(window.innerWidth<1024?("8rem"):("8rem")):("0px"
                       <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                     </svg>
                   </button>
-                  <ul className="absolute z-20 hidden pt-0 pb-0 text-gray-700 dropdown-menu ">
+                  <ul className="absolute z-20 hidden pt-0 pb-0 text-gray-700 dropdown-menu lg:ml-[45px]">
                     <li className="border-b border-gray-700 ">
                       <Link href="/AboutUs">
                         <a className="block px-4 py-2 whitespace-no-wrap bg-blue-600 hover:no-underline text-yellow-50 hover:bg-white hover:text-black">
@@ -102,7 +102,7 @@ const top = window.scrollY<1  ?(window.innerWidth<1024?("8rem"):("8rem")):("0px"
                     <li className="border-b border-gray-700 ">
                       <Link href="/PrincipalMessage">
                         <a className="block px-4 py-2 whitespace-no-wrap bg-blue-600 hover:no-underline text-yellow-50 hover:bg-white hover:text-black">
-                          Principal Messagem
+                          Principal&nbsp;Messagem
                         </a>
                       </Link>
                     </li>
@@ -121,13 +121,13 @@ const top = window.scrollY<1  ?(window.innerWidth<1024?("8rem"):("8rem")):("0px"
                       <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                     </svg>
                   </button>
-                  <ul className="absolute z-20 hidden pt-0 pb-0 text-gray-700 dropdown-menu">
+                  <ul className="absolute z-20 hidden pt-0 pb-0 text-gray-700 dropdown-menu lg:ml-[47px]">
                     <li className="border-b border-gray-700 hover:border-b hover:border-black ">
                       <a
                         className="block px-4 py-2 whitespace-no-wrap bg-blue-600 text-yellow-50 hover:no-underline hover:bg-white hover:text-black"
                         href="/AdmissionProcedure"
                       >
-                        Admission Procedure
+                        Admission&nbsp;Procedure
                       </a>
                     </li>
                     <li className="border-b border-gray-700 hover:border-b hover:border-black ">
@@ -138,28 +138,37 @@ const top = window.scrollY<1  ?(window.innerWidth<1024?("8rem"):("8rem")):("0px"
                         Facilities
                       </a>
                     </li>
-                   
-                     
+
+
                   </ul>
                 </div>
               </a>
-             <Link  href="/Gallery">
-              <a
-                
-                className="block mt-2 mr-4 text-center text-black lg:pl-24 lg:inline-block lg:mt-0 hover:no-underline"
-              >
-                Gallery
-              </a>
-             </Link>
-             <Link  href="/Contactus">
-              <a
-                href="/Contactus"
-                className="block mt-2 mr-4 text-center text-black lg:pl-24 lg:inline-block lg:mt-0 hover:no-underline"
-              >
-                Contact us
-              </a>
+              <Link href="/Gallery">
+                <a
+
+                  className="block mt-2 mr-4 text-center text-black lg:pl-24 lg:inline-block lg:mt-0 hover:no-underline"
+                >
+                  Gallery
+                </a>
               </Link>
-              
+              <Link href="/Contactus">
+                <a
+                  href="/Contactus"
+                  className="block mt-2 mr-4 text-center text-black lg:pl-24 lg:inline-block lg:mt-0 hover:no-underline"
+                >
+                  Contact us
+                </a>
+              </Link>
+
+              <Link href="#">
+                <a
+                  className="block px-2 py-2 mt-2 text-sm leading-none text-center text-white bg-red-500 border rounded lg:ml-28 lg:inline-block hover:border-transparent lg:mt-0"
+                >
+                  Login{" "}
+
+                </a>
+              </Link>
+
             </div>
           </div>
         </nav>
