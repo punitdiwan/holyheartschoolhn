@@ -33,7 +33,7 @@ const AboutUs = ({ data_header,aboutus_data }) => {
   return (
     <Layout header_data={data_header}>
       <div
-        className="mx-3 "
+        className="mx-3 mt-10 "
       >
         <img
           className="w-full "
@@ -45,6 +45,10 @@ const AboutUs = ({ data_header,aboutus_data }) => {
           </h5>
           <p className="mb-0">Holy Heart School is one of the oldest schools for both girls and boys managed by Holy Heart Group. Holy Heart Group is run by Mr Devendra Singh Ji. Our institution is recogniged by the Madhya Pradesh Board of education.We, Holy Heart School, understand that each child is a distinct individual who needs to be nurtured in order to grow into a mature and responsible citizen. Our academic infrastructure along with a wide range of co-curricular activities help our students in the all round personality development. We have a strong team of motivated teachers who are always ready to accept challenges of developing the potential of each and every student. Keeping in view the ideas of democracy and our ancient culture, Holy Heart strives to provide a system of education most suited to the needs of our society today. Stress on innovative methods of teaching , opportunities for shouldering responsibilities during school life, constant participation in sports and co-curricular activities lend meaning to the school life. Thus, the end product is the harmonious, all round developed personality of our students poised on the threshold of life.            </p>
         </div> 
+        <img
+          className="w-full "
+          src="/images/lower.png"
+        />
       </div>
     </Layout>
   );
