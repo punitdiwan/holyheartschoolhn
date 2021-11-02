@@ -88,21 +88,21 @@ const Header = ({ header_data }) => {
                     <li className="border-b border-gray-700 hover:border-b hover:border-black ">
                       <Link href="/DirectorMessage">
                         <a className="block px-4 py-2 whitespace-no-wrap bg-blue-600 hover:no-underline text-yellow-50 hover:bg-white hover:text-black">
-                          Director Message
+                          Director&nbsp;Message
                         </a>
                       </Link>
                     </li>
                     <li className="border-b border-gray-700 hover:border-b hover:border-black ">
                       <Link href="/ManagementDesk">
                         <a className="block px-4 py-2 whitespace-no-wrap bg-blue-600 hover:no-underline text-yellow-50 hover:bg-white hover:text-black">
-                          Management Desk
+                          Management&nbsp;Message
                         </a>
                       </Link>
                     </li>
                     <li className="border-b border-gray-700 ">
                       <Link href="/PrincipalMessage">
                         <a className="block px-4 py-2 whitespace-no-wrap bg-blue-600 hover:no-underline text-yellow-50 hover:bg-white hover:text-black">
-                          Principal&nbsp;Messagem
+                          Principal&nbsp;Message
                         </a>
                       </Link>
                     </li>
@@ -160,13 +160,13 @@ const Header = ({ header_data }) => {
                 </a>
               </Link>
 
-              <Link href="#">
-                <a
-                  className="block px-2 py-2 mt-2 text-sm leading-none text-center text-white bg-red-500 border rounded lg:ml-28 lg:inline-block hover:border-transparent lg:mt-0"
-                >
-                  Login{" "}
-
-                </a>
+              <Link  href="https://cms.schoolscoop.co.in/admin/#/login?project=holyheartschoolhn">
+              <a target="_blank"
+                className="block px-2 py-2 mt-2 text-sm leading-none text-center text-white bg-red-500 border rounded lg:ml-28 lg:inline-block hover:border-transparent lg:mt-0"
+              >
+                Login 
+                
+              </a>
               </Link>
 
             </div>
