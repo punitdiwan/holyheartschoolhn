@@ -2,7 +2,11 @@ import React from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 import Head from 'next/head'
+import ReactGA from "react-ga4";
 
+
+
+ReactGA.initialize("G-SWT88YBL1S");
 const Layout = ({ children, header_data }) => {
   return (
     <div>
