@@ -4,9 +4,9 @@ import Header from "./Header";
 import Head from 'next/head'
 import ReactGA from "react-ga4";
 
-ReactGA.initialize("G-XXXXXXXXXX");
 
 
+ReactGA.initialize("G-SWT88YBL1S");
 const Layout = ({ children, header_data }) => {
   return (
     <div>
