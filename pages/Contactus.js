@@ -13,7 +13,7 @@ const Contactus = ({data_header}) => {
         </div>
         <div className="mt-[15px] lg:mx-16 px-6     flex md:flex-row flex-col">
           <iframe className=" md:w-[600px] md:h-[450px] "
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3666.546720983941!2d77.4043810639478!3d23.22318411463037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c42e965d87301%3A0x3add09c8b0525c25!2sHarshavardhan%20Nagar%2C%20Panchsheel%20Nagar%2C%20Bhopal%2C%20Madhya%20Pradesh%20462003!5e0!3m2!1sen!2sin!4v1635147981274!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3666.530419240655!2d77.40619439999999!3d23.223777799999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjPCsDEzJzI1LjYiTiA3N8KwMjQnMjIuMyJF!5e0!3m2!1sen!2sin!4v1753947935093!5m2!1sen!2sin"
 
             style={{ border: "0" }}
             allowFullScreen=""
@@ -31,7 +31,7 @@ const Contactus = ({data_header}) => {
             {data_header?.data? data_header?.data[0]?.address : "  Maitretech School Bhopal"}
               {/* Dwarka Nagar , Nisatpura , Bhopal-462010 Phone: 0755-2740018 */}
             </address>
-            <div> Phone   :{data_header?.data? data_header?.data[0]?.phone : "111111211"}</div>
+            <div><strong>Phone   :</strong> {data_header?.data? data_header?.data[0]?.phone : "111111211"}</div>
             <strong>Email:</strong>
             <address className="text-black">
               <a>
