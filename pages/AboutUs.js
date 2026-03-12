@@ -17,7 +17,6 @@ const AboutUs = ({ data_header,aboutus_data }) => {
 
 
         if (response?.data?.data?.length > 0) {
-          console.log(response.data);
           setdata(response.data.data[0])
            
         }
