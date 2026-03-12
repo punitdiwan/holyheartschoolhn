@@ -85,6 +85,6 @@ let aboutus_data
 
   return {
     props: { data_header,aboutus_data },
-    revalidate: 2, // will be passed to the page component as props
+    revalidate: 86400, // will be passed to the page component as props
   }
 }
