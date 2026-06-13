@@ -42,6 +42,37 @@ const apiPlugin = () => ({
             res.end(JSON.stringify(error.response?.data || { error: error.message }));
           }
         });
+      } else if (req.url.startsWith('/api/admission_enquiry') && req.method === 'POST') {
+        let body = '';
+        req.on('data', chunk => {
+          body += chunk.toString();
+        });
+
+        req.on('end', async () => {
+          try {
+            const baseUrl = env.VITE_BASE_URL || 'https://cms.maitretech.com';
+            const school = env.VITE_SCHOOL || 'holyheartschoolhn';
+            const apiToken = env.VITE_API_TOKEN || 'UKmjTqR4xJP7uXncUdNXpDNP';
+            const cmsUrl = `${baseUrl}/${school}/items/admission_enquiry`;
+
+            const payload = JSON.parse(body || '{}');
+            const response = await axios.post(cmsUrl, payload, {
+              headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${apiToken}`,
+              },
+            });
+
+            res.statusCode = response.status;
+            res.setHeader('Content-Type', 'application/json');
+            res.end(JSON.stringify(response.data));
+          } catch (error) {
+            console.error('Admission Enquiry Proxy Error:', error.response?.data || error.message);
+            res.statusCode = error.response?.status || 500;
+            res.setHeader('Content-Type', 'application/json');
+            res.end(JSON.stringify(error.response?.data || { error: error.message }));
+          }
+        });
       } else if (req.url.startsWith('/api/teacher_application') && req.method === 'POST') {
         const form = new IncomingForm();
         form.parse(req, async (err, fields, files) => {

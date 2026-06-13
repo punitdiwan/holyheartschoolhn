@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 
 const AdmissionForm = () => {
-  const baseUrl = import.meta.env.VITE_BASE_URL;
-  const school = import.meta.env.VITE_SCHOOL;
-
   const [formData, setFormData] = useState({
     student_name: "",
     email: "",
@@ -33,19 +30,17 @@ const AdmissionForm = () => {
     setError("");
 
     try {
-      const response = await fetch(
-        `${baseUrl}/${school}/items/admission_enquiry`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
+      const response = await fetch('/api/admission_enquiry', {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
+      const result = await response.json();
       if (!response.ok) {
-        throw new Error("Failed to submit form");
+        throw new Error(result?.error || "Failed to submit form");
       }
 
       setSuccess("Admission enquiry submitted successfully!");
