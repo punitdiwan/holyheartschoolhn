@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .stickyt {
-  position: fixed ;
+  position: fixed;
   top: 0;
   width: 100%;
 }
@@ -15,11 +15,9 @@
 #menu-toggle:checked+#menu {
 display: block;
 }
-
 .dropdown-menu{ 
   text-align: left;
 }
-
 .dropdown:hover .dropdown-menu {
 display: block;
 }
