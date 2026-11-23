@@ -23,7 +23,7 @@ const GalleryFacebookSection = ({ header_data }) => {
 
   // CMS Links
   const instagramUrl = schoolData?.instagram || "";
-  const facebookUrl = schoolData?.facebook || "";
+  const facebookUrl =  "https://www.facebook.com/share/1FAmNNQbK9/";
 
   // Instagram Embed
   const instagramEmbed = instagramUrl
