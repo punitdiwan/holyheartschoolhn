@@ -95,91 +95,92 @@ const GalleryFacebookSection = ({ header_data }) => {
             </Link>
           </div>
 
-          {/* ================= Instagram ================= */}
-          <div className="flex flex-col items-center">
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-8 h-[2px] bg-[#1b3359]"></div>
-              <h2 className="text-xl font-bold text-[#1b3359] uppercase tracking-wide">
-                Instagram
-              </h2>
-              <div className="w-8 h-[2px] bg-[#1b3359]"></div>
-            </div>
+{/* ================= Instagram ================= */}
 
-            <div className="w-full bg-white p-2 rounded-lg shadow-xl mb-8 border border-gray-200">
-              <div className="h-[350px] overflow-hidden rounded-md bg-gray-50">
+<div className="flex flex-col items-center">
 
-                {instagramUrl ? (
-                  <iframe
-                    src={instagramEmbed}
-                    width="100%"
-                    height="100%"
-                    frameBorder="0"
-                    scrolling="no"
-                    allow="encrypted-media"
-                    title="Instagram"
-                  />
-                ) : (
-                  <div className="flex items-center justify-center h-full">
-                    Instagram Link Not Available
-                  </div>
-                )}
+  {/* Instagram Heading */}
+  <div className="flex items-center gap-3 mb-8">
+    <div className="w-8 h-[2px] bg-[#1b3359]"></div>
 
-              </div>
-            </div>
+    <h2 className="text-xl font-bold text-[#1b3359] uppercase tracking-wide">
+      Instagram
+    </h2>
 
-            <a
-              href={instagramUrl || "#"}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#385a91] text-white px-8 py-3 rounded-md font-bold shadow-md hover:bg-[#1b3359] transition text-xs uppercase text-center w-full max-w-[220px]"
-            >
-              View On Instagram
-            </a>
-          </div>
+    <div className="w-8 h-[2px] bg-[#1b3359]"></div>
+  </div>
+
+  {/* Instagram Image Card */}
+  <div className="w-full bg-white p-2 rounded-lg shadow-xl mb-8 border border-gray-200">
+    <div className="relative h-[350px] overflow-hidden rounded-md">
+
+      {instagramUrl ? (
+        <img
+          src="/images/holy-heart-insta.png"
+          alt="Instagram Preview"
+          className="h-full w-full object-fill"
+        />
+      ) : (
+        <div className="flex items-center justify-center h-full">
+          Instagram Link Not Available
+        </div>
+      )}
+
+    </div>
+  </div>
+
+  {/* Instagram Button */}
+  <a
+    href={instagramUrl || "#"}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-[#385a91] text-white px-8 py-3 rounded-md font-bold shadow-md hover:bg-[#1b3359] transition text-xs uppercase text-center w-full max-w-[220px]"
+  >
+    View On Instagram
+  </a>
+
+</div>
+
 
           {/* ================= Facebook ================= */}
-          <div className="flex flex-col items-center">
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-8 h-[2px] bg-[#1b3359]"></div>
-              <h2 className="text-xl font-bold text-[#1b3359] uppercase tracking-wide">
-                Facebook
-              </h2>
-              <div className="w-8 h-[2px] bg-[#1b3359]"></div>
-            </div>
+         <div className="flex flex-col items-center">
+  <div className="flex items-center gap-3 mb-8">
+    <div className="w-8 h-[2px] bg-[#1b3359]"></div>
 
-            <div className="w-full bg-white p-2 rounded-lg shadow-xl mb-8 border border-gray-200">
-              <div className="h-[350px] overflow-hidden rounded-md bg-gray-50">
+    <h2 className="text-xl font-bold text-[#1b3359] uppercase tracking-wide">
+      Facebook
+    </h2> 
 
-                {facebookUrl ? (
-                  <iframe
-                    src={facebookEmbed}
-                    width="100%"
-                    height="100%"
-                    style={{ border: "none", overflow: "hidden" }}
-                    scrolling="no"
-                    frameBorder="0"
-                    allowFullScreen
-                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
-                    title="Facebook"
-                  />
-                ) : (
-                  <div className="flex items-center justify-center h-full">
-                    Facebook Link Not Available
-                  </div>
-                )}
+    <div className="w-8 h-[2px] bg-[#1b3359]"></div>
+  </div>
 
-              </div>
-            </div>
+  <div className="w-full bg-white p-2 rounded-lg shadow-xl mb-8 border border-gray-200">
+    <div className="relative h-[350px] overflow-hidden rounded-md bg-gray-50">
 
-            <a
-              href={facebookUrl || "#"}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#385a91] text-white px-8 py-3 rounded-md font-bold shadow-md hover:bg-[#1b3359] transition text-xs uppercase text-center w-full max-w-[220px]"
-            >
-              View On Facebook
-            </a>
-          </div>
+      {facebookUrl ? (
+        <img
+          src="/images/holy-heart-fb.jpg"
+          alt="Facebook Preview"
+          className="h-full w-full object-cover"
+        />
+      ) : (
+        <div className="flex items-center justify-center h-full">
+          Facebook Link Not Available
+        </div>
+      )}
+
+    </div>
+  </div>
+
+  <a
+    href={facebookUrl || "#"}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-[#385a91] text-white px-8 py-3 rounded-md font-bold shadow-md hover:bg-[#1b3359] transition text-xs uppercase text-center w-full max-w-[220px]"
+  >
+    View On Facebook
+  </a>
+</div>
 
         </div>
       </div>
